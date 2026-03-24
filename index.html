@@ -1,9 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>My Minimal Blog - Sunish</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="UTF-8" />
+<title>Sunish S | Neon Portfolio</title>
+
+<style>
+    body {
+        margin:0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, #06021f, #120048, #1f005c);
+        background-size: 400% 400%;
+        animation: bgShift 12s ease infinite;
+        color:white;
+    }
+
+    @keyframes bgShift {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+    }
+
+    /* HEADER */
+    .header {
+        text-align:center;
+        padding:60px 20px;
+    }
+    .header h1 {
+        font-size:52px;
+        font-weight:900;
+        text-shadow: 0 0 25px #ff00f7;
+    }
+    .header p {
+        font-size:18px;
+        opacity:0.9;
+    }
+
+    /* PHOTO */
+    .photo-wrapper {
+        width:160px;
+        height:160px;
+        border-radius:50%;
+        margin:20px auto;
+        background:rgba(255,255,255,0.1);
+        backdrop-filter: blur(10px);
+        border:3px solid rgba(255,255,255,0.3);
+        box-shadow:0 0 25px rgba(255,0,221,0.6);
+        background-size:cover;
+        background-position:center;
+        background-image:url('https://via.placeholder.com/400'); /* REPLACE WITH YOUR IMAGE URL */
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+        max-width:1100px;
+        margin:30px auto;
+        background:rgba(255,255,255,0.1);
+        padding:40px;
+        border-radius:20px;
+        backdrop-filter: blur(12px);
+        box-shadow:0 0 30px rgba(0,0,0,0.3);
+    }
+
+    /* SECTION TITLES */
+    h2 {
+        font-size:26px;
+        margin-top:40px;
+        margin-bottom:20px;
+        background: linear-gradient(90deg, #ff00d4, #ff6f00, #00eaff);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        text-shadow:0 0 20px rgba(255,255,255,0.3);
+    }
+
+    /* CARDS */
+    .card {
+        background:rgba(255,255,255,0.1);
+        padding:20px;
+        border-radius:15px;
+        margin-bottom:20px;
+        box-shadow:0 0 20px rgba(0,255,255,0.08);
+        transition:transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+        transform:translateY(-5px);
+        box-shadow:0 0 25px rgba(0,255,255,0.4);
+    }
+
+    .skill-block {
+        display:flex;
+        flex-wrap:wrap;
+        gap:20px;
+    }
+
+    .skill-card {
+        flex:1;
+        min-width:280px;
+    }
+
+    ul {
+        line-height:1.8;
+    }
+
+    /* PROJECT TITLES */
+    .project-title {
+        font-size:20px;
+        font-weight:700;
+        margin-top:15px;
+        color:#00eaff;
+        text-shadow:0 0 15px rgba(0,238,255,0.6);
+    }
+
+    /* FOOTER */
+    .footer {
+        text-align:center;
+        padding:25px;
+        margin-top:40px;
+        color:#fff;
+        opacity:0.8;
+        font-size:14px;
+    }
+</style>
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -12,193 +129,133 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MSDTWRL');</script>
 <!-- End Google Tag Manager -->
 </head>
-<body style="margin:0;font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, ui-monospace, SFMono-Regular, Menlo, Monaco, 'Roboto Mono',monospace; background: radial-gradient(1200px 400px at 10% 10%, rgba(14,165,164,0.04), transparent 10%), radial-gradient(900px 300px at 95% 90%, rgba(15,23,42,0.03), transparent 8%), #f6f7f9;color:#0f172a;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding:48px 20px;display:flex;justify-content:center;align-items:flex-start;box-sizing:border-box;height:100%;">
-  <div role="main" style="width:100%;max-width:1100px;display:grid;grid-template-columns:1fr 330px;gap:28px;align-items:start;box-sizing:border-box;">
-    <!-- Header -->
-    <header style="grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:8px;">
-      <a href="#" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;">
-        <div style="width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#0ea5a4,#06b6d4);box-shadow:0 6px 18px rgba(12,14,20,0.06);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Roboto Mono,monospace;font-size:18px;">MB</div>
-        <div style="display:flex;flex-direction:column;line-height:1;">
-          <div style="font-weight:700;font-size:18px">My Minimal Blog</div>
-          <div style="font-size:12px;color:#6b7280">ideas • essays • tutorials</div>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="photo-wrapper"></div>
+    <h1>Sunish S</h1>
+    <p>Data Analytics Implementation Specialist • AI & Digital Intelligence Expert</p>
+    <p>📞 +46 733023877 • ✉️ sunishs33@gmail.com</p>
+</div>
+
+<!-- MAIN BODY -->
+<div class="container">
+
+    <!-- ABOUT ME -->
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            A vibrant mix of analytics engineering, experimentation architecture, AI-driven insights &
+            global digital measurement. I turn messy behavioural signals into clean, trustworthy,
+            privacy-compliant datasets that power product decisions and user experience improvements.
+        </p>
+    </div>
+
+    <!-- SKILLS -->
+    <h2>Core Skills</h2>
+    <div class="skill-block">
+        <div class="card skill-card">
+            <ul>
+                <li><b>Analytics:</b> Adobe Analytics, GA4, Amplitude, AEP</li>
+                <li><b>Experimentation:</b> Target, Optimizely, LaunchDarkly</li>
+                <li><b>Mobile:</b> Firebase, Mixpanel</li>
+            </ul>
         </div>
-      </a>
-
-      <div style="display:flex;gap:10px;align-items:center;">
-        <div role="search" aria-label="Search posts" style="padding:10px 12px;border-radius:10px;background:transparent;border:1px solid rgba(15,23,42,0.06);min-width:220px;display:flex;align-items:center;gap:10px;box-shadow:0 2px 6px rgba(12,14,20,0.03);">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="opacity:.7"><path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <input placeholder="Search posts..." style="border:0;outline:0;background:transparent;font-size:14px;color:#0f172a;width:100%;" />
+        <div class="card skill-card">
+            <ul>
+                <li><b>Engineering:</b> Snowflake, BigQuery, Airflow, DBT</li>
+                <li><b>Tagging:</b> GTM, Adobe Launch, Tealium IQ</li>
+                <li><b>Visualization:</b> Power BI, Looker, Workspace</li>
+            </ul>
         </div>
-        <button style="padding:10px 14px;background:#0ea5a4;color:white;border-radius:10px;font-weight:600;border:0;cursor:pointer;box-shadow:0 6px 18px rgba(12,14,20,0.06);">Subscribe</button>
-      </div>
-    </header>
-
-    <!-- Main -->
-    <main style="display:flex;flex-direction:column;gap:18px;">
-      <!-- Hero -->
-      <section aria-labelledby="featured-title" style="background:linear-gradient(180deg, rgba(14,165,164,0.06), transparent 60%);border-radius:12px;padding:22px;box-shadow:0 6px 18px rgba(12,14,20,0.06);display:flex;gap:18px;align-items:center;">
-        <div style="flex:1;">
-          <div style="font-size:13px;color:#0ea5a4;font-weight:700;letter-spacing:0.6px">Featured</div>
-          <h1 id="featured-title" style="margin:8px 0 8px;font-size:22px;line-height:1.12;">Designing simple systems for complex problems</h1>
-          <p style="margin:0;color:#6b7280">Practical tips on breaking large challenges into testable, maintainable pieces — with examples and a small checklist to get started.</p>
-          <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
-            <div style="background:rgba(14,165,164,0.08);color:#0ea5a4;padding:6px 8px;border-radius:999px;font-weight:600;font-size:12px">Design</div>
-            <div style="font-size:13px;color:#6b7280">Mar 24, 2026 · 7 min read</div>
-          </div>
+        <div class="card skill-card">
+            <ul>
+                <li><b>Programming:</b> JavaScript, Python</li>
+                <li><b>AI:</b> Snowflake Cortex AI, Github Copilot</li>
+                <li><b>Cloud:</b> GCP, Adobe Experience Cloud</li>
+            </ul>
         </div>
-        <div role="img" aria-label="Featured illustration" style="width:140px;height:100px;border-radius:10px;background:linear-gradient(135deg, rgba(10,132,255,0.15), rgba(124,58,237,0.12)), url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23e6eefc%22/><circle cx=%2250%22 cy=%2250%22 r=%2230%22 fill=%22%23a7f3d0%22/></svg>');background-size:cover;flex-shrink:0;box-shadow:0 8px 20px rgba(12,14,20,0.06);"></div>
-      </section>
+    </div>
 
-      <!-- Posts list -->
-      <section aria-label="Recent posts" style="display:grid;gap:14px;">
-        <article aria-labelledby="p1" style="background:white;border-radius:12px;padding:16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 6px 18px rgba(12,14,20,0.06);border:1px solid rgba(15,23,42,0.03);">
-          <div style="width:120px;height:82px;border-radius:8px;background:linear-gradient(120deg,#fef3c7,#fee2e2);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#0f172a;font-weight:700;">A</div>
-          <div style="flex:1;">
-            <h2 id="p1" style="margin:0 0 8px;font-size:16px;">Atomic tasks: How to split work the right way</h2>
-            <p style="margin:0 0 10px;color:#6b7280;font-size:14px;">Splitting big work into atomic tasks lets you ship faster and learn earlier — here's a practical approach that teams actually use.</p>
-            <div style="display:flex;gap:10px;align-items:center;font-size:13px;color:#6b7280">
-              <div style="font-size:13px;color:#6b7280">Mar 20 · 5 min</div>
-              <div style="width:6px;height:6px;border-radius:50%;background:rgba(15,23,42,0.06);"></div>
-              <div style="font-size:13px;color:#6b7280">Productivity</div>
-            </div>
-          </div>
-        </article>
+    <!-- EXPERIENCE -->
+    <h2>Experience</h2>
 
-        <article aria-labelledby="p2" style="background:white;border-radius:12px;padding:16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 6px 18px rgba(12,14,20,0.06);border:1px solid rgba(15,23,42,0.03);">
-          <div style="width:120px;height:82px;border-radius:8px;background:linear-gradient(120deg,#ede9fe,#dbeafe);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#0f172a;font-weight:700;">B</div>
-          <div style="flex:1;">
-            <h2 id="p2" style="margin:0 0 8px;font-size:16px;">An engineer's guide to good docs</h2>
-            <p style="margin:0 0 10px;color:#6b7280;font-size:14px;">Documentation isn't a one-off task. Learn the lightweight rituals teams use to keep docs helpful and discoverable.</p>
-            <div style="display:flex;gap:10px;align-items:center;font-size:13px;color:#6b7280">
-              <div style="font-size:13px;color:#6b7280">Mar 14 · 6 min</div>
-              <div style="width:6px;height:6px;border-radius:50%;background:rgba(15,23,42,0.06);"></div>
-              <div style="font-size:13px;color:#6b7280">Docs</div>
-            </div>
-          </div>
-        </article>
+    <div class="card">
+        <h3>Volvo Cars – Data Analytics Implementation Specialist</h3>
+        <ul>
+            <li>Led GA4 → Amplitude migration architecture</li>
+            <li>Engineered server-side tagging & GDPR-safe data flows</li>
+            <li>Built Snowflake ELT pipelines with Airflow</li>
+            <li>Created Cortex AI agents for CSAT insights</li>
+            <li>Designed Volvo’s unified digital data layer</li>
+        </ul>
+    </div>
 
-        <article aria-labelledby="p3" style="background:white;border-radius:12px;padding:16px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 6px 18px rgba(12,14,20,0.06);border:1px solid rgba(15,23,42,0.03);">
-          <div style="width:120px;height:82px;border-radius:8px;background:linear-gradient(120deg,#cffafe,#fef3c7);flex-shrink:0;display:flex;align-items:center;justify-content:center;color:#0f172a;font-weight:700;">C</div>
-          <div style="flex:1;">
-            <h2 id="p3" style="margin:0 0 8px;font-size:16px;">On feedback: short loops, clear signals</h2>
-            <p style="margin:0 0 10px;color:#6b7280;font-size:14px;">Short feedback cycles help teams learn faster. This post covers three concrete feedback loops you can introduce this week.</p>
-            <div style="display:flex;gap:10px;align-items:center;font-size:13px;color:#6b7280">
-              <div style="font-size:13px;color:#6b7280">Mar 1 · 4 min</div>
-              <div style="width:6px;height:6px;border-radius:50%;background:rgba(15,23,42,0.06);"></div>
-              <div style="font-size:13px;color:#6b7280">Teamwork</div>
-            </div>
-          </div>
-        </article>
-      </section>
-    </main>
+    <div class="card">
+        <h3>Cognizant – Manager, AI & Analytics</h3>
+        <ul>
+            <li>Led Adobe Experience Cloud analytics for Asian markets</li>
+            <li>Built KPI frameworks & Snowflake dashboards</li>
+        </ul>
+    </div>
 
-    <!-- Sidebar -->
-    <aside style="position:relative;top:0;">
-      <div style="background:white;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,14,20,0.06);border:1px solid rgba(15,23,42,0.03);margin-bottom:16px;">
-        <h3 style="margin:0 0 8px">About me</h3>
-        <p style="margin:0;color:#6b7280;font-size:14px;">I'm an independent writer exploring product design, engineering practices, and how teams ship better software — one idea at a time.</p>
-      </div>
+    <div class="card">
+        <h3>Publicis Sapient – Senior Associate</h3>
+        <ul>
+            <li>Migrated UA → GA4 for GameStop</li>
+            <li>Drove 10–50 bps conversion increase via A/B testing</li>
+            <li>Integrated Google AI Recommendations Engine</li>
+        </ul>
+    </div>
 
-      <div style="background:white;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,14,20,0.06);border:1px solid rgba(15,23,42,0.03);margin-bottom:16px;">
-        <h3 style="margin:0 0 8px">Recent</h3>
-        <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px;">
-          <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px;border-radius:10px;transition:background .15s;">
-            <div style="display:flex;gap:10px;align-items:center;">
-              <div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#fbcfe8,#c7d2fe);display:flex;align-items:center;justify-content:center;font-weight:700;color:#1f2937;flex-shrink:0;">MB</div>
-              <div>
-                <div style="font-weight:700">Atomic tasks</div>
-                <div style="font-size:13px;color:#6b7280">Mar 20 · 5m</div>
-              </div>
-            </div>
-            <div style="font-size:13px;color:#0ea5a4">Read</div>
-          </div>
+    <!-- PROJECTS -->
+    <h2>Highlighted Projects</h2>
 
-          <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px;border-radius:10px;transition:background .15s;">
-            <div style="display:flex;gap:10px;align-items:center;">
-              <div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#fde68a,#dbeafe);display:flex;align-items:center;justify-content:center;font-weight:700;color:#1f2937;flex-shrink:0;">EN</div>
-              <div>
-                <div style="font-weight:700">Good docs</div>
-                <div style="font-size:13px;color:#6b7280">Mar 14 · 6m</div>
-              </div>
-            </div>
-            <div style="font-size:13px;color:#0ea5a4">Read</div>
-          </div>
+    <div class="card">
+        <div class="project-title">🚗 Volvo Cars – Unified Analytics Platform</div>
+        <ul>
+            <li>Built centralized analytics data layer (web + app)</li>
+            <li>Created Amplitude dashboards for squads</li>
+            <li>Integrated OneTrust consent + GDPR logic</li>
+        </ul>
 
-          <div style="display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px;border-radius:10px;transition:background .15s;">
-            <div style="display:flex;gap:10px;align-items:center;">
-              <div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#bbf7d0,#fbcfe8);display:flex;align-items:center;justify-content:center;font-weight:700;color:#1f2937;flex-shrink:0;">TF</div>
-              <div>
-                <div style="font-weight:700">Feedback loops</div>
-                <div style="font-size:13px;color:#6b7280">Mar 1 · 4m</div>
-              </div>
-            </div>
-            <div style="font-size:13px;color:#0ea5a4">Read</div>
-          </div>
-        </div>
-      </div>
+        <div class="project-title">🎮 GameStop – Personalization & GA4 Migration</div>
+        <ul>
+            <li>Enhanced e‑commerce tracking + A/B testing</li>
+            <li>Integrated Google AI product recommendation engine</li>
+        </ul>
 
-      <div style="background:white;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,14,20,0.06);border:1px solid rgba(15,23,42,0.03);margin-bottom:16px;">
-        <h3 style="margin:0 0 8px">Subscribe</h3>
-        <p style="margin:0 0 12px;color:#6b7280">Get new posts by email — one short note when something new is published.</p>
-        <form onsubmit="event.preventDefault();alert('Subscribed (demo)');" style="display:flex;gap:8px;">
-          <input type="email" required placeholder="you@domain.com" style="flex:1;padding:10px;border-radius:10px;border:1px solid rgba(15,23,42,0.06);outline:none" />
-          <button type="submit" style="padding:10px 14px;background:#0ea5a4;color:white;border-radius:10px;font-weight:600;border:0;cursor:pointer;box-shadow:0 6px 18px rgba(12,14,20,0.06);">Join</button>
-        </form>
-      </div>
+        <div class="project-title">🚬 BAT Japan – Enterprise Adobe Analytics</div>
+        <ul>
+            <li>Led team of 6 analysts</li>
+            <li>Built multi-market Snowflake + Power BI insights</li>
+        </ul>
+    </div>
 
-      <div style="background:white;padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,14,20,0.06);border:1px solid rgba(15,23,42,0.03);text-align:center;color:#6b7280;font-size:13px;">
-        <div style="margin-bottom:8px">Tags</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
-          <div style="padding:8px 10px;background:rgba(15,23,42,0.03);border-radius:999px;font-weight:600;font-size:13px">Design</div>
-          <div style="padding:8px 10px;background:rgba(15,23,42,0.03);border-radius:999px;font-weight:600;font-size:13px">Product</div>
-          <div style="padding:8px 10px;background:rgba(15,23,42,0.03);border-radius:999px;font-weight:600;font-size:13px">Docs</div>
-          <div style="padding:8px 10px;background:rgba(15,23,42,0.03);border-radius:999px;font-weight:600;font-size:13px">Workflow</div>
-        </div>
-      </div>
-    </aside>
+    <!-- PRESENTATIONS -->
+    <h2>Presentations & Workshops</h2>
+    <div class="card">
+        <ul>
+            <li>Platform Con 2024, Gothenburg – “Data Collection on Volvocars.com”</li>
+            <li>GA4 workshop series for Volvo product clusters</li>
+            <li>Adobe Analytics Bootcamp for 100+ new hires</li>
+        </ul>
+    </div>
 
-    <!-- Footer -->
-    <footer style="grid-column:1/-1;margin-top:8px;text-align:center;color:#6b7280;font-size:13px;">
-      © Mar 24, 2026 — Built with a focus on clarity.
-    </footer>
-  </div>
+    <!-- EDUCATION -->
+    <h2>Education</h2>
+    <div class="card">
+        <p><b>B.E. in Computer Science</b><br>Mahendra Engineering College (2007–2011)</p>
+    </div>
 
-  <!-- Responsive adjustments via small inline script to convert layout on narrow screens -->
-  <script>
-    (function(){
-      function apply() {
-        var mainWrap = document.querySelector('div[role="main"]');
-        if (!mainWrap) return;
-        if (window.innerWidth <= 980) {
-          mainWrap.style.gridTemplateColumns = '1fr';
-          document.querySelector('aside').style.order = '2';
-          document.querySelector('main').style.order = '1';
-        } else {
-          mainWrap.style.gridTemplateColumns = '1fr 330px';
-          document.querySelector('aside').style.order = '';
-          document.querySelector('main').style.order = '';
-        }
-        if (window.innerWidth <= 420) {
-          document.body.style.padding = '20px';
-          var hero = document.querySelector('section[aria-labelledby="featured-title"]');
-          if (hero) {
-            hero.style.flexDirection = 'column';
-            hero.style.alignItems = 'flex-start';
-            var cover = hero.querySelector('[role="img"]');
-            if (cover) { cover.style.width = '100%'; cover.style.height = '130px'; cover.style.borderRadius = '10px'; }
-          }
-          var posts = document.querySelectorAll('article[aria-labelledby]');
-          posts.forEach(function(p){
-            p.style.flexDirection = 'column';
-            var thumb = p.querySelector('div[style*="width:120px"]');
-            if (thumb) { thumb.style.width = '100%'; thumb.style.height = '160px'; thumb.style.borderRadius = '10px'; }
-          });
-        }
-      }
-      apply();
-      window.addEventListener('resize', apply);
-    })();
-  </script>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 • Designed exclusively for Sunish • Neon Edition ⚡
+</div>
+
 </body>
 </html>
-```
