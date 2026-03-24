@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MSDTWRL');</script>
-<!-- End Google Tag Manager -->
 <meta charset="UTF-8" />
 <title>Sunish Surendran | Senior Martech Architect</title>
 
@@ -19,19 +12,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         color:#222;
         line-height:1.6;
     }
-
-    /* GLOBAL */
     h1,h2,h3 { margin:0; }
-    a { text-decoration:none; }
+    a { text-decoration:none; color:inherit; }
 
-    /* HEADER HERO */
+    /* HERO */
     .hero {
         background:linear-gradient(135deg, #0A0F2C, #1B2A49);
         padding:70px 30px;
         color:white;
         text-align:center;
     }
-
     .photo {
         width:150px;
         height:150px;
@@ -41,11 +31,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         border:4px solid rgba(255,255,255,0.4);
         box-shadow:0 0 20px rgba(255,255,255,0.3);
     }
-
     .hero h1 {
         font-size:42px;
         font-weight:800;
-        letter-spacing:1px;
     }
     .hero p {
         margin:8px 0;
@@ -53,7 +41,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         opacity:0.9;
     }
 
-    /* CONTACT BUTTONS */
     .contact-buttons {
         margin-top:25px;
         display:flex;
@@ -75,7 +62,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         background:#ffffff55;
     }
 
-    /* SECTION WRAPPER */
+    /* DARK STRIP */
+    .dark-strip {
+        background:#10192f;
+        color:white;
+        padding:50px 30px;
+        text-align:center;
+    }
+    .dark-strip h2 {
+        font-size:30px;
+        color:white;
+    }
+
+    /* SECTIONS */
     .section {
         max-width:1100px;
         margin:50px auto;
@@ -84,7 +83,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         border-radius:15px;
         box-shadow:0 4px 18px rgba(0,0,0,0.07);
     }
-
     .section h2 {
         font-size:28px;
         color:#0A2A43;
@@ -93,7 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         padding-left:12px;
     }
 
-    /* SKILLS CARDS */
+    /* SKILLS */
     .skills-grid {
         display:flex;
         flex-wrap:wrap;
@@ -110,9 +108,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .skill-card h3 {
         margin-bottom:10px;
         color:#003366;
-    }
-    .skill-card ul {
-        padding-left:18px;
     }
 
     /* TIMELINE */
@@ -136,13 +131,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         top:4px;
     }
     .timeline-item h3 {
-        margin:0;
         font-size:20px;
         color:#0A1F33;
-    }
-    .timeline-item span {
-        font-size:14px;
-        opacity:0.8;
     }
 
     /* PROJECTS */
@@ -159,21 +149,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         color:#003366;
     }
 
-    /* DARK STRIP FOR SUMMARY */
-    .dark-strip {
-        background:#10192f;
-        color:white;
-        padding:50px 30px;
-        text-align:center;
-        margin-top:60px;
-    }
-    .dark-strip h2 {
-        font-size:30px;
-        color:white;
-        border-left:none;
-    }
-
-    /* FOOTER */
     .footer {
         text-align:center;
         padding:25px;
@@ -181,6 +156,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         color:#444;
         margin-top:20px;
     }
+
 </style>
 </head>
 
@@ -193,21 +169,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <p>Senior Martech Architect • Digital Analytics Leader • AI-Driven Data Engineering Specialist</p>
     <p>📍 Sweden | 🌍 12+ Years Global Experience</p>
 
-    <!-- CONTACT BUTTONS -->
+    <!-- CONTACT BUTTONS (with IDs for tracking) -->
     <div class="contact-buttons">
-        <a href="mailto:sunishs33@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/sunishs33/" target="_blank">LinkedIn</a>
-        <a href="https://wa.me/46733023877" target="_blank">WhatsApp (Sweden)</a>
-        <a href="https://wa.me/917204297691" target="_blank">WhatsApp (India)</a>
+        <a id="cta-email" href="mailto:sunishs33@gmail.com">Email Me</a>
+        <a id="cta-linkedin" href="https://www.linkedin.com/in/sunishs33/" target="_blank">LinkedIn</a>
+        <a id="cta-whatsapp-se" href="https://wa.me/46733023877" target="_blank">WhatsApp (SE)</a>
+        <a id="cta-whatsapp-in" href="https://wa.me/917204297691" target="_blank">WhatsApp (IN)</a>
     </div>
 </div>
 
-<!-- SUMMARY STRIP -->
+<!-- DARK STRIP SUMMARY -->
 <div class="dark-strip">
     <h2>MarTech Engineer • Analytics Architect • Experimentation Strategist</h2>
     <p>
-        Specializing in Adobe Analytics, GA4, Amplitude, server‑side tagging, Snowflake engineering,
-        and scalable data-layer architectures for enterprise ecosystems.
+        Expert in Adobe Analytics, GA4, Amplitude, server‑side tagging, and Snowflake data engineering.
+        I design scalable, privacy‑first analytics systems that empower enterprise digital decisions.
     </p>
 </div>
 
@@ -215,14 +191,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="section">
     <h2>About Me</h2>
     <p>
-        I am a senior MarTech architect with over 12 years of experience spanning analytics implementation,
-        experimentation frameworks, data engineering, AI-driven insights, and customer experience analytics
-        across world-class brands like Volvo Cars, BAT Japan, GameStop, BMW, JCPenney, CDW, and Dolby Digital.
-    </p>
-    <p>
-        My work focuses on solving complex business problems with scalable data architecture,
-        privacy-compliant customer tracking, server‑side analytics systems, and meaningful measurement
-        frameworks that empower product and marketing teams to make confident decisions.
+        I am a senior MarTech architect with over 12 years of experience across digital analytics,
+        experimentation, tag management, data engineering, personalization systems, and AI-driven
+        customer insights. My work spans global brands like Volvo Cars, BAT, GameStop, BMW,
+        JCPenney, CDW, Dolby Digital, and Korean Airlines.
     </p>
 </div>
 
@@ -232,33 +204,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <div class="skills-grid">
         <div class="skill-card">
-            <h3>Analytics Platforms</h3>
-            <ul><li>Adobe Analytics (Master Certified)</li><li>Google Analytics 4</li><li>Amplitude</li><li>AEP</li></ul>
+            <h3>Analytics</h3>
+            <ul><li>Adobe Analytics (Master Cert.)</li><li>Google Analytics 4</li><li>Amplitude</li><li>AEP</li></ul>
         </div>
-
         <div class="skill-card">
             <h3>Tag Management</h3>
-            <ul><li>Adobe Launch</li><li>Google Tag Manager (Web & Server-Side)</li><li>Tealium IQ</li><li>Ensighten</li></ul>
+            <ul><li>Adobe Launch</li><li>GTM (Web + Server)</li><li>Tealium IQ</li><li>Ensighten</li></ul>
         </div>
-
         <div class="skill-card">
-            <h3>A/B Testing & Optimization</h3>
+            <h3>A/B Testing</h3>
             <ul><li>Adobe Target</li><li>Optimizely</li><li>LaunchDarkly</li><li>Eppo</li></ul>
         </div>
-
         <div class="skill-card">
             <h3>Data Engineering</h3>
-            <ul><li>Snowflake</li><li>BigQuery</li><li>Airflow</li><li>DBT</li></ul>
+            <ul><li>Snowflake</li><li>Airflow</li><li>BigQuery</li><li>DBT</li></ul>
         </div>
-
         <div class="skill-card">
-            <h3>Programming</h3>
-            <ul><li>JavaScript</li><li>Python</li><li>Data Layer Engineering</li></ul>
-        </div>
-
-        <div class="skill-card">
-            <h3>AI & Automation</h3>
-            <ul><li>Snowflake Cortex AI Agents</li><li>Predictive Analytics</li><li>Behavioral Modelling</li></ul>
+            <h3>Languages & AI</h3>
+            <ul><li>JavaScript</li><li>Python</li><li>Snowflake Cortex AI Agents</li></ul>
         </div>
     </div>
 </div>
@@ -268,99 +231,155 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <h2>Career Timeline</h2>
 
     <div class="timeline">
-
         <div class="timeline-item">
-            <h3>Volvo Cars, Sweden — Data Analytics Implementation Specialist</h3>
-            <span>Nov 2022 – Present</span>
-            <p>Amplitude migration, GA4 server‑side tagging, Snowflake ELT pipelines, AI agents for CSAT, GDPR/PII frameworks.</p>
+            <h3>Volvo Cars — Data Analytics Implementation Specialist</h3>
+            <span>2022 – Present</span>
+            <p>Amplitude migration, GA4 server-side tagging, Snowflake pipelines, GDPR/PII frameworks.</p>
         </div>
-
         <div class="timeline-item">
             <h3>Cognizant — Manager, AI & Analytics</h3>
-            <span>Nov 2021 – Nov 2022</span>
-            <p>Adobe Experience Cloud implementations, KPI frameworks, Snowflake reporting for Asia markets.</p>
+            <span>2021 – 2022</span>
+            <p>Adobe EC deployments, KPI frameworks, Snowflake analysis for Asia markets.</p>
         </div>
-
         <div class="timeline-item">
-            <h3>Publicis Sapient — Senior Associate, Marketing Analytics</h3>
-            <span>Apr 2018 – Oct 2021</span>
-            <p>GA4 migration for GameStop, Google AI product recommendations, A/B test strategy & execution.</p>
+            <h3>Publicis Sapient — Senior Associate</h3>
+            <span>2018 – 2021</span>
+            <p>GA4 migration for GameStop; personalization & experimentation.</p>
         </div>
-
         <div class="timeline-item">
-            <h3>Accenture — Digital Marketing Senior Advisory Analyst</h3>
-            <span>Jul 2015 – Apr 2018</span>
-            <p>Adobe Analytics across BMW, CDW; Ensighten → Tealium migration; email workflow automation.</p>
+            <h3>Accenture — Senior Advisory Analyst</h3>
+            <span>2015 – 2018</span>
+            <p>Adobe Analytics for BMW, CDW; Ensighten → Tealium migrations.</p>
         </div>
-
         <div class="timeline-item">
-            <h3>Nabler, Sidssol — Software Engineer (Analytics)</h3>
+            <h3>Nabler & Sidssol — Software Engineer</h3>
             <span>2012 – 2015</span>
-            <p>GA, GTM, Adobe DTM implementations for Dolby, Korean Airlines, CTU, Chatsworth.org.</p>
+            <p>GA, GTM, DTM implementations for Dolby, Korean Airlines, CTU.</p>
         </div>
-
     </div>
 </div>
 
-<!-- PROJECT SHOWCASE -->
+<!-- PROJECTS -->
 <div class="section">
-    <h2>Key Projects & Case Studies</h2>
+    <h2>Key Projects</h2>
 
     <div class="project">
         <h3>Volvo Cars — Unified Measurement & AI Insights</h3>
         <ul>
-            <li>Built GA4 → Amplitude migration framework</li>
-            <li>Designed Snowflake data models integrating GA4 + Amplitude</li>
-            <li>Constructed server-side tagging setup</li>
-            <li>Built Cortex AI agents for CSAT pattern recognition</li>
-            <li>Led GDPR/PII-safe tracking ecosystem</li>
+            <li>Built GA4 → Amplitude migration pipeline</li>
+            <li>Designed Snowflake models integrating GA4 & Amplitude</li>
+            <li>Developed Cortex AI agents for CSAT</li>
+            <li>Managed server-side tagging & GDPR ecosystems</li>
         </ul>
     </div>
 
     <div class="project">
-        <h3>GameStop — Enterprise GA4 Migration</h3>
+        <h3>GameStop — GA4 Migration + Personalization</h3>
         <ul>
-            <li>Migrated UA → GA4 with Enhanced E-commerce</li>
-            <li>Delivered 10–50 bps conversion lift via A/B testing</li>
-            <li>Integrated Google AI Recommendations Engine</li>
+            <li>Enhanced Ecommerce + UA → GA4 migration</li>
+            <li>Integrated Google AI Recommendation Engine</li>
+            <li>Delivered A/B test uplift of 10–50 bps</li>
         </ul>
     </div>
 
     <div class="project">
-        <h3>BAT Japan — Adobe Analytics Enterprise Deployment</h3>
+        <h3>BAT Japan — Adobe Analytics Enterprise rollout</h3>
         <ul>
             <li>Led team of 6 analysts</li>
-            <li>Developed KPI dashboards via Snowflake + Power BI</li>
-            <li>Asia-wide performance review presentations</li>
+            <li>Built Asia-wide Snowflake dashboards</li>
         </ul>
     </div>
-
-    <div class="project">
-        <h3>BMW — 120+ Market Adobe Analytics Rollout</h3>
-        <ul>
-            <li>Global tagging strategy & workspace dashboards</li>
-            <li>Automated KPI reporting for all markets</li>
-        </ul>
-    </div>
-</div>
-
-<!-- EDUCATION & CERTIFICATIONS -->
-<div class="section">
-    <h2>Education & Certifications</h2>
-    <p><strong>B.E. Computer Science</strong>, Mahendra Engineering College (2007–2011)</p>
-
-    <ul>
-        <li>Adobe Certified Master – Analytics Architect</li>
-        <li>Adobe Certified Expert – Analytics Developer</li>
-        <li>Google Analytics IQ (GAIQ)</li>
-        <li>Amplitude Analytics Certificate</li>
-    </ul>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
     © 2026 • Portfolio of Sunish Surendran • Senior Martech Architect
 </div>
+
+
+
+<!-- ===========================================================
+     GA4 DATA LAYER + TRACKING FRAMEWORK
+     Place this BEFORE </body>
+=========================================================== -->
+<script>
+// INITIALIZE
+window.dataLayer = window.dataLayer || [];
+
+// PAGE VIEW
+dataLayer.push({
+    event: "page_view",
+    page_title: document.title,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    user_type: "portfolio_visitor"
+});
+
+// CTA TRACKER
+function trackCTA(id, name) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.addEventListener("click", () => {
+        dataLayer.push({
+            event: "cta_click",
+            cta_id: id,
+            cta_name: name,
+            cta_text: el.innerText.trim(),
+            page_location: window.location.href
+        });
+    });
+}
+
+// Register CTAs
+trackCTA("cta-email", "Email");
+trackCTA("cta-linkedin", "LinkedIn");
+trackCTA("cta-whatsapp-se", "WhatsApp_SE");
+trackCTA("cta-whatsapp-in", "WhatsApp_IN");
+
+// OUTBOUND LINK TRACKING
+document.addEventListener("click", (e) => {
+    const link = e.target.closest("a");
+    if (link && link.href && !link.href.includes(location.hostname)) {
+        dataLayer.push({
+            event: "outbound_click",
+            outbound_url: link.href,
+            link_text: link.innerText.trim(),
+            page_location: window.location.href
+        });
+    }
+});
+
+// SCROLL DEPTH TRACKING
+let scrollPoints = {25:false, 50:false, 75:false, 100:false};
+
+window.addEventListener("scroll", () => {
+    const percent = ((window.scrollY + window.innerHeight) / document.body.scrollHeight) * 100;
+
+    [25,50,75,100].forEach((mark) => {
+        if (percent >= mark && !scrollPoints[mark]) {
+            scrollPoints[mark] = true;
+            dataLayer.push({
+                event: "scroll_depth",
+                scroll_percent: mark,
+            });
+        }
+    });
+});
+
+// CUSTOM ATTRIBUTE TRACKING
+document.addEventListener("click", function (e) {
+    let tracked = e.target.closest("[data-track]");
+    if (tracked) {
+        dataLayer.push({
+            event: "custom_interaction",
+            action: tracked.getAttribute("data-track"),
+            text: tracked.innerText || null,
+            page_location: window.location.href
+        });
+    }
+});
+</script>
 
 </body>
 </html>
